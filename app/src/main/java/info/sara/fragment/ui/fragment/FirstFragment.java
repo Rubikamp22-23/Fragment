@@ -52,7 +52,9 @@ public class FirstFragment extends Fragment {
         Button actionButton = view.findViewById(R.id.button_first);
 
         actionButton.setOnClickListener(view1 -> {
-            Navigation.findNavController(view1).navigate(R.id.action_firstFragment_to_secondFragment);
+            Bundle bundle = new Bundle();
+            bundle.putString("KEY_TEST", "ZAHRA");
+            Navigation.findNavController(view1).navigate(R.id.action_firstFragment_to_secondFragment, bundle);
 
         });
 

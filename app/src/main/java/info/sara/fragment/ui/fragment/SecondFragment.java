@@ -31,5 +31,8 @@ public class SecondFragment extends Fragment {
         binding.buttonSecond.setOnClickListener(view1 -> {
             Navigation.findNavController(view1).navigate(R.id.action_secondFragment_to_firstFragment);
         });
+
+        binding.textviewSecond.setText(getArguments().getString("KEY_TEST"));
+
     }
 }
